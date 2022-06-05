@@ -21,7 +21,7 @@ class ViewController: UIViewController {
        
         
         CoreDataController.fetchAllEmployees() { employees in
-            print("employees:\(String(describing: employees))")
+          
             guard let employeeList = employees else {
                 ApiCalls().getEmployeeDetailList() { employeeData in
                     self.employeeDetailArray = employeeData

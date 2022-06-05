@@ -20,7 +20,7 @@ class EmployeeListTableViewCell: UITableViewCell {
     var data: Employee? {
         didSet {
             userNameLabel.text = data?.name ?? ""
-            //companyNameLabel.text =  data?.company?.name
+            companyNameLabel.text =  data?.company?.name
             let url = URL(string: data?.profile_image ?? "")
             profileImageView.kf.setImage(with: url)
         }
